@@ -1,0 +1,70 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int arr[100], i, ch, n, sum=0, cont;
+
+    cout<<"How many elements you want to enter: ";
+    cin>>n;
+
+    cout<<"Enter elements elements in Array: \n";
+
+    for(i=0;i<n-1;i++){
+        cin>>arr[i];
+    }
+     for(i=0;i<n-1;i++){
+        cout<<arr[i]<<endl;
+    }
+      beginning:
+     cout<<"Choose an option: \n1. Add 1 More Element\n2. Traverse Odd Location Elements\n3. Sum of Elements on Odd location\n";
+    cin>>ch;
+
+      switch(ch){
+
+case 1:
+     cout<<"This feature is Under Development (Press 1 to Continue! ) ";
+    cin>>cont;
+    if(cont == 1){
+        goto beginning;
+    }
+    break;
+
+case 2:
+        cout<<"Traversing Odd Location Elements: \n";
+        for(i=0;i<n-1;i++){
+        if(i%2==1){
+            cout<<"Location: "<<i<<" Element: "<<arr[i]<<endl;
+        }
+        }
+          cout<<"\n\n(Press 1 to Continue! ) ";
+    cin>>cont;
+    if(cont == 1){
+        goto beginning;
+    }
+    break;
+
+case 3:
+    for(i=0;i<n-1;i++){
+            if(i%2==1){
+               sum+=arr[i];
+            }
+
+    }
+    cout<<"Sum of Elements on ODD Location: "<<sum;
+
+     cout<<"\n\n(Press 1 to Continue! ) ";
+    cin>>cont;
+    if(cont == 1){
+        goto beginning;
+    }
+    break;
+default:
+      cout<<"\nChoice is out of Range!!!\n";
+        goto beginning;
+    }
+
+
+    return 0;
+}
